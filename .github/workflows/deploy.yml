@@ -3,7 +3,7 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - main
+      - main  
 
 jobs:
   deploy:
@@ -16,14 +16,14 @@ jobs:
     - name: Set up Julia
       uses: julia-actions/setup-julia@v1
       with:
-        version: '1.9'
+        version: '1.9' 
 
-    - name: Install dependencies for the docs target
+    - name: Install dependencies
       run: |
-        julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.activate("."); Pkg.resolve(); Pkg.build("docs")'
+        julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
     - name: Build and deploy documentation
       env:
-        DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
+        DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}  
       run: |
-        julia --project=. docs/make.jl
+        julia --project=. -e 'include("docs/make.jl")'
