@@ -33,6 +33,11 @@ jobs:
       run: |
         julia --project=. -e 'include("docs/make.jl")'
 
+    - name: Debug build output
+      run: |
+        echo "Contents of docs/build:"
+        ls -al docs/build
+
     - name: Upload artifact for deployment
       uses: actions/upload-pages-artifact@v1
       with:
