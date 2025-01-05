@@ -2,6 +2,7 @@ using Documenter
 using MyPackage
 
 makedocs(
+    authors="Soichiro Yamane",
     sitename="MyPackage.jl",
     modules=[MyPackage],
     format=Documenter.HTML(),
