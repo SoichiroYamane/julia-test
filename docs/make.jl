@@ -5,7 +5,13 @@ makedocs(
     authors="Soichiro Yamane",
     sitename="MyPackage.jl",
     modules=[MyPackage],
-    format=Documenter.HTML(),
     repo="https://github.com/SoichiroYamane/julia-test",
     # remotes=nothing
+
+    format=Documenter.HTML(;
+        prettyurls=get(ENV, "CI", "false") == "true",
+        canonical="https://soichiroyamane.github.io/julia-test",
+        repolink="https://github.com/SoichiroYamane/julia-test",
+        assets=String[],
+    ),
 )
