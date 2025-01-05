@@ -5,5 +5,6 @@ makedocs(
     sitename="MyPackage.jl",
     modules=[MyPackage],
     format=Documenter.HTML(),
-    repo="",
-    remotes=nothing)
+    repo="https://github.com/SoichiroYamane/julia-test",
+    remotes="origin"
+)
