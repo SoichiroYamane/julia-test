@@ -1,9 +1,12 @@
 module MyPackage
 
+"""
+`greet` は "Hello World!" を出力します。
+"""
 greet() = print("Hello World!")
 
 @doc raw"""
-`Add` is add.
+`Add` は加算のための抽象型です。
 """
 abstract type Add end
 
@@ -23,6 +26,10 @@ add(x::Add, y::Add)::Add = x + y
 function add(x::Number, y::Number)::Number
     return x + y
 end
+
+
+
+
 
 
 end # module MyPackage
