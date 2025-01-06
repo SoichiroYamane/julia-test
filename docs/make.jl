@@ -10,6 +10,7 @@ makedocs(
 
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
+        highlightjs="catppuccin-mocha",
         canonical="https://soichiroyamane.github.io/julia-test",
         repolink="https://github.com/SoichiroYamane/julia-test",
         assets=String[],
