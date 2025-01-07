@@ -1,7 +1,7 @@
 name = "MyPackage"
 uuid = "5140c445-da35-41c5-ad2e-326abe79485a"
 authors = ["Soichiro Yamane <soichiro.yamane.19970619@gmail.com>"]
-version = "0.1.0"
+version = "0.0.1"
 
 [deps]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
